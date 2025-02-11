@@ -1,0 +1,30 @@
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: 2c3e50;
+  margin-bottom: 20px;
+}
+h2 {
+  color: #34495e;
+  margin-bottom: 15px;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li{
+  background-color: aliceblue;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgb(0,0,0,0.1);
+}
