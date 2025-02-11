@@ -55,3 +55,17 @@ const countNormal = pokemon.filter(pokemon => pokemon.types.includes("normal")).
 // explination
 // first we filter the pokemon array to only include pokemon that have a type of normal and then we get the lenght of the array 
 console.log(countNormal);
+
+
+// an array with all pokemon except the pokemon with the id of 148
+const noneId = pokemon.filter(pokemon => pokemon.id !== 148);
+console.log(noneId);
+
+// an array with all pokemon and for pokemon id: 35 replacing "normal" with "fairy"
+const replaceType = pokemon.map(pokemon => {
+    if(pokemon.id ===35) {
+        return {
+            
+        }
+    }
+})
