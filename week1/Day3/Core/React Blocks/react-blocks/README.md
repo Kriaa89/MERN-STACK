@@ -16,3 +16,12 @@ react-blocks/ ├── src/ │ ├── components/ │ │ ├── Header.
 
 ### Component Hierarchy
 pp ├── Header ├── Navigation └── MainContent ├── Subcontent (x3) └── Advertisement
+Technologies Used
+React 18
+Vite
+CSS3
+Learning Objectives Achieved
+Created and nested functional components
+Implemented component-based architecture
+Applied CSS styling to React components
+Practiced component reusability
