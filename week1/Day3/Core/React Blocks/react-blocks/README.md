@@ -1,8 +1,18 @@
-# React + Vite
+# React Blocks Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project recreates the "Plotting your Blocks" assignment using React Components and CSS styling. It demonstrates the use of functional components, component hierarchy, and CSS styling in React.
 
-Currently, two official plugins are available:
+## Project Structure
+react-blocks/ ├── src/ │ ├── components/ │ │ ├── Header.jsx │ │ ├── Navigation.jsx │ │ ├── MainContent.jsx │ │ ├── Subcontent.jsx │ │ └── Advertisement.jsx │ ├── App.jsx │ └── App.css
+## Components Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Functional Components
+- **App**: Root component that renders the main layout
+- **Header**: Top section of the layout
+- **Navigation**: Left sidebar section
+- **MainContent**: Central content area containing Subcontent and Advertisement
+- **Subcontent**: Three identical blocks within MainContent
+- **Advertisement**: Bottom section within MainContent
+
+### Component Hierarchy
+pp ├── Header ├── Navigation └── MainContent ├── Subcontent (x3) └── Advertisement
