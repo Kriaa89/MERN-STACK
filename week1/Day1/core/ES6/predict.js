@@ -123,7 +123,7 @@ function printNames(names) {
     actuallyPrintingNames();
 }
 printNames(beatles);
-// Paul was found at index 0
+// Paul was found at index 0 
 // George was found at index 1
 // John was found at index 2
 // Ringo was found at index 3 
@@ -141,5 +141,5 @@ const planet = {
 const planetCopy = {...planet}
 console.log(planet.composition[0] === planetCopy.composition[0]) 
 console.log(planet === planetCopy)
-// True 
+// True because the first element in the composition array is the same in both objects
 // False because planet and PlanetCopy are different objects
