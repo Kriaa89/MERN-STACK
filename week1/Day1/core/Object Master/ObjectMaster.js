@@ -53,6 +53,6 @@ console.log(findFlying)
 const find148 = pokemon.filter(pokemon => pokemon.id !== 148)
 console.log(find148)
 
-// a count of the number of pokémon that are "normal" type 
-const numberExpect = pokemon.map(pokemon => pokemon.types[1] !== "normal" && pokemon.types.length == 2);
-console.log(numberExpect)
+// an array containing just the first type of all the pokémon whose second type is "flying"
+const flyingfirstType = pokemon.filter(p => p.types[1] === "flying").map(p => p.types[0])
+console.log(flyingfirstType);
