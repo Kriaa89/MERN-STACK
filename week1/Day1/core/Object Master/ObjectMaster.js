@@ -50,3 +50,8 @@ console.log(namesPoison);
 const firstypeFlying = pokemon.filter(pokemon => pokemon.types.length > 1 && pokemon.types[1] === "flying").map(pokemon => pokemon.types[0]);
 console.log(firstypeFlying);
 
+// a count of the number of pokémon that are "normal" type
+const countNormal = pokemon.filter(pokemon => pokemon.types.includes("normal")).length;
+// explination
+// first we filter the pokemon array to only include pokemon that have a type of normal and then we get the lenght of the array 
+console.log(countNormal);
