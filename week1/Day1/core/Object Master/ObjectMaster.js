@@ -29,43 +29,19 @@ const pokemon = Object.freeze([
 const divBy3 = pokemon.filter(pokemon => pokemon.id % 3 === 0);
 console.log(divBy3);
 // an array of pokémon objects that are "fire" type
-const typeFire = pokemon.filter(pokemon => pokemon.types.includes("fire"))
+const typeFire = pokemon.filter
 console.log(typeFire);
 // an array of pokémon objects that have more than one type 
 const multitype = pokemon.filter(pokemon => pokemon.types.length > 1);
 console.log(multitype);
-// an array with just the names of the pokémon 
-const names = pokemon.map(pokemon => pokemon.name);
+// an array with just the names of the pokémon
+const names = pokemon.map( p => p.name);
 console.log(names);
 
 // an array with just the names of pokémon with an id greater than 99
-const names99 = pokemon.filter(pokemon => pokemon.id > 99).map(pokemon => pokemon.name);
-console.log(names99);
+const find99 = pokemon.filter(pokemon => pokemon.id > 99);
+console.log(find99)
 
 // an array with just the names of the pokémon whose only type is poison
-const namesPoison = pokemon.filter(pokemon => pokemon.types.length === 1 && pokemon.types[0] === "poison").map(pokemon => pokemon.name);
-console.log(namesPoison);
-
-// an array containing just the first type of all the pokémon whose second type is "flying"
-const firstypeFlying = pokemon.filter(pokemon => pokemon.types.length > 1 && pokemon.types[1] === "flying").map(pokemon => pokemon.types[0]);
-console.log(firstypeFlying);
-
-// a count of the number of pokémon that are "normal" type
-const countNormal = pokemon.filter(pokemon => pokemon.types.includes("normal")).length;
-// explination
-// first we filter the pokemon array to only include pokemon that have a type of normal and then we get the lenght of the array 
-console.log(countNormal);
-
-
-// an array with all pokemon except the pokemon with the id of 148
-const noneId = pokemon.filter(pokemon => pokemon.id !== 148);
-console.log(noneId);
-
-// an array with all pokemon and for pokemon id: 35 replacing "normal" with "fairy"
-const replaceType = pokemon.map(pokemon => {
-    if(pokemon.id ===35) {
-        return {
-            
-        }
-    }
-})
+const findType = pokemon.filter(pokemon => pokemon.types = "poison")
+console.log(findType)
