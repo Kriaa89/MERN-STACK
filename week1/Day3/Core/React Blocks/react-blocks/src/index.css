@@ -1,49 +1,46 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
-
 .app {
-  width: 950px;
-  background-color: #dddddd;
-  margin: 0 auto;
-  padding: 20px;
+    width: 950px;
+    background-color: #dddddd;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .header {
-  height: 150px;
-  background-color: #6aa84f;
-  margin-bottom: 20px;
+    height: 150px;
+    background-color: #6aa84f;
+    margin-bottom: 20px;
 }
+.navigation{
+    height: 300px;
+    width: 200px;
+    background-color: #6fa8dc;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
 
-.navigation {
-  height: 300px;
-  width: 200px;
-  background-color: #6fa8dc;
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 20px;
 }
-
 .main {
-  width: 700px;
-  height: 400px;
-  background-color: #e06666;
-  display: inline-block;
-  padding: 15px;
+    width: 700px;
+    height: 400px;
+    background-color: #e06666;
+    display: inline-block;
+    padding: 15px;
 }
 
 .subcontent {
-  height: 200px;
-  width: 210px;
-  background-color: #ffd966;
-  display: inline-block;
-  margin: 10px;
+    height: 200px;
+    width: 210px;
+    background-color: #ffd966;
+    display: inline-block;
+    margin: 10px;
 }
-
 .advertisement {
-  height: 120px;
-  width: 660px;
-  background-color: #b4a7d6;
-  margin: 10px;
+    height: 120px;
+    width: 660px;
+    background-color: #b4a7d6;
+    margin: 10px;
 }
