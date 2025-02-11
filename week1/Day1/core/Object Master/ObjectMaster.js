@@ -29,7 +29,7 @@ const pokemon = Object.freeze([
 const divBy3 = pokemon.filter(pokemon => pokemon.id % 3 === 0);
 console.log(divBy3);
 // an array of pokémon objects that are "fire" type
-const typeFire = pokemon.filter
+const typeFire = pokemon.filter(pokemon => pokemon.types[1] == "fire" && pokemon.types.length == 2);
 console.log(typeFire);
 // an array of pokémon objects that have more than one type 
 const multitype = pokemon.filter(pokemon => pokemon.types.length > 1);
@@ -43,5 +43,16 @@ const find99 = pokemon.filter(pokemon => pokemon.id > 99);
 console.log(find99)
 
 // an array with just the names of the pokémon whose only type is poison
-const findType = pokemon.filter(pokemon => pokemon.types = "poison")
+const findType = pokemon.filter(pokemon => pokemon.types[0] === "poison" && pokemon.types.length == 1);
 console.log(findType)
+
+const findFlying = pokemon.filter(pokemon => pokemon.types[1] ==="flying" && pokemon.types.length == 2);
+console.log(findFlying)
+
+// an array with all pokemon except the pokemon with the id of 148
+const find148 = pokemon.filter(pokemon => pokemon.id !== 148)
+console.log(find148)
+
+// a count of the number of pokémon that are "normal" type 
+const numberExpect = pokemon.map(pokemon => pokemon.types[1] !== "normal" && pokemon.types.length == 2);
+console.log(numberExpect)
