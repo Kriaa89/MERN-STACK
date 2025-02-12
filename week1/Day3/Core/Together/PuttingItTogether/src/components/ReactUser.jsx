@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
 const ReactUser = (props) => {
-    const { firstName, lastName, hairColor, initialAge } = props;
-    const [age, setAge ] = useState(initialAge);
+    const { firstName, lastName, hairColor } = props;
+    const [age, setAge ] = useState(0);
     const handleClick = () => {
-        setAge(prevAge => prevAge + 1);
+        setAge(age + 1);
     };
     return (
         <div className='react-user'>

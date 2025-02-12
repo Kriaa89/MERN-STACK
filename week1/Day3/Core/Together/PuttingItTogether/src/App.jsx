@@ -8,7 +8,7 @@ function App() {
         firstName="John"
         lastName="Doe"
         hairColor="Black"
-        initialAge={30}
+        age={30}
       />
       <ReactUser
         firstName="smith"
