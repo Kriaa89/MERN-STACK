@@ -82,5 +82,5 @@ This project is open-sourced under the MIT License. See [LICENSE](LICENSE) for m
 ---
 
 <div align="center">
-  <sub>Built with ❤️ by [Abdallah Yessine Kriaa]</sub>
+  <sub>Built with ❤️ by Abdallah Yessine Kriaa</sub>
 </div>
