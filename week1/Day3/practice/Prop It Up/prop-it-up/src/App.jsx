@@ -1,8 +1,9 @@
 import './App.css'
+import './index.css'
 import PersonCard from './components/Person'
 function App() {
   return (
-      <div className='app'>
+      <div className='card'>
           <PersonCard
               firstName={"John"}
               lastName={"Doe"}
