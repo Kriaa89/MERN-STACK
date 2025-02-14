@@ -11,4 +11,4 @@ const formatRelativeTime = (date) => {
 };
 const formatAdancedFormat = (date) => {
     return dayjs(date).format("dddd, MMMM D, YYYY")
-}
+};
