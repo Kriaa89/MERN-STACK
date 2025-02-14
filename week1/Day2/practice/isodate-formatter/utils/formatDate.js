@@ -9,3 +9,6 @@ dayjs.extend(advancedFormat);
 const formatRelativeTime = (date) => {
     return dayjs(date).fromNow();
 };
+const formatAdancedFormat = (date) => {
+    return dayjs(date).format("dddd, MMMM D, YYYY")
+}
