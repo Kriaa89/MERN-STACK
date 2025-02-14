@@ -58,3 +58,11 @@ console.log(normalCount)
 // 9
 const no148 = pokemon.filter(pokemon => pokemon.id !== 148);
 console.log(no148);
+
+const updateType = pokemon.map(pokemon => {
+    if(pokemon.id === 35) {
+        return {...pokemon, types: ["fairy"]
+        }
+    }
+    return pokemon;
+})
