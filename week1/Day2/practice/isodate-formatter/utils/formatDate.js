@@ -5,4 +5,7 @@ import advancedFormat from "dayjs/plugin/advancedFormat";
 dayjs.extend(relativeTime);
 dayjs.extend(advancedFormat);
 
-const 
+// this 
+const formatRelativeTime = (date) => {
+    return dayjs(date).fromNow();
+};
