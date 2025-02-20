@@ -25,15 +25,22 @@ This project showcases different routing scenarios in a React Single Page Applic
 - **Conditional Rendering:** Uses a ternary operator:
   isNaN(+id) ? <h1>The word is: {id}</h1> : <h1>The number is: {id}</h1>
 
-#### Flow Chart Explanation
+### Flow Chart Explanation
 
-URL Parameter (/something)  
-        ↓  
-    isNaN(+id)?  
-    ↙         ↘  
-   Yes         No  
-    ↓          ↓  
-Show Word    Show Number  
+---
+
+```mermaid
+flowchart TD
+    A[URL Parameter (/something)]
+    B{isNaN(+id)?}
+    C[Show Word]
+    D[Show Number]
+    A --> B
+    B -- Yes --> C
+    B -- No --> D
+```
+
+---
 
 ### Dynamic Styling
 - **Inline Styles:** URL parameters used to set text color and background color dynamically.
