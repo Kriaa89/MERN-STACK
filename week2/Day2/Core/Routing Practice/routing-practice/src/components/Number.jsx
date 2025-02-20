@@ -2,13 +2,14 @@ import React from "react";
 import { useParams} from "react-router-dom";
 
 const Number = () => {
-    const { number } = useParams();
+    const { id } = useParams();
     
     return (
         <div>
             {
-                isNaN(+number)
-                    <h1> The number is:  {number}</h1>
+                isNaN(+id) 
+                    ? <h1>The word is: {id}</h1> // if true 
+                    : <h1> The Number is:  {id}</h1> // iff false
             }
         </div>
     );

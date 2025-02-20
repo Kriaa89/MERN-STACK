@@ -1,8 +1,8 @@
-import { BrowserRouter, Routes, Route} from "rreact-router-dome";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from "./components/Home";
 import Number from "./components/Number";
 import Word from "./components/Word";
-import wordColor from "./components/WordColor";
+import  WordColor from "./components/WordColor";
 
 import "./App.css"
 
@@ -13,8 +13,9 @@ function App() {
         <Route path="/home" element={< Home/>}></Route>
         <Route path="/:id" element={< Number/>}></Route>
         <Route path="/word" element={<Word/>}></Route>
-        <Route path="/:word/" element={< word/>}></Route>
+        <Route path="/:word/:textColor/:bgColor" element={<WordColor/>}></Route>
       </Routes>
     </BrowserRouter>
   )
 }
+export default App;

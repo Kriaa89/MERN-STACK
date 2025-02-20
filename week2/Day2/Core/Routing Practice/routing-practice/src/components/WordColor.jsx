@@ -7,5 +7,7 @@ const WordColor = () => {
         <h1 style={{ color: textColor, backgroundColor: bgColor}}>
             The word is: {word}
         </h1>
-    )
+    );
 }
+
+export default WordColor;
