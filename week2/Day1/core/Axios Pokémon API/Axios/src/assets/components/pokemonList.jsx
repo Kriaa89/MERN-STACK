@@ -11,13 +11,13 @@ const PokemonList = () => {
         .catch(err => {
             console.log(err);
         })
-    });
+    }, []);
     return (
         <div>
             <h1>Pokemon List</h1>
             <ul>
-                {pokemon.map((name, index) => (
-                    <li key={index}>{name}</li>
+                {pokemon.map((mon, index) => (
+                    <li key={index}>{mon.name}</li>
                 ))}
             </ul>
         </div>
