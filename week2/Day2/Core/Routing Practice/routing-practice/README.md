@@ -1,8 +1,52 @@
-# React + Vite
+# React Router Practice
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application demonstrating dynamic routing capabilities using react-router-dom.
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project showcases different routing scenarios in a React Single Page Application (SPA):
+- **Basic routing:** Displays a welcome message at `/home`
+- **Dynamic parameter handling:** Renders content based on URL parameters, handling numbers, words, and styled text.
+- **Multiple parameter routing with styling:** Dynamically displays text with customizable text and background colors.
+
+## Routes Implemented
+
+1. `/home` - Displays a welcome message.
+2. `/:number` - Shows a number or converts it to a word display based on type.
+3. `/:word` - Displays the provided word.
+4. `/:word/:textColor/:bgColor` - Displays the word with dynamic text and background colors.
+
+## Technical Concepts
+
+### Parameter Handling
+- **Dynamic Routes:** Using `useParams()` to extract URL parameters.
+- **Type Checking:** Using `isNaN(+id)` to differentiate between numbers and words.
+- **Conditional Rendering:** Ternary operators to decide display output.
+- **Conditional Rendering:** Uses a ternary operator:
+  isNaN(+id) ? <h1>The word is: {id}</h1> : <h1>The number is: {id}</h1>
+
+#### Flow Chart Explanation
+
+URL Parameter (/something)  
+        ↓  
+    isNaN(+id)?  
+    ↙         ↘  
+   Yes         No  
+    ↓          ↓  
+Show Word    Show Number  
+
+### Dynamic Styling
+- **Inline Styles:** URL parameters used to set text color and background color dynamically.
+
+## Setup Instructions
+
+1. Clone the repository.
+2. Install dependencies.
+3. Run the development server using your preferred command (e.g., `npm start` or `yarn dev`).
+
+## Route Examples
+
+- http://localhost:5173/home → Welcome message.
+- http://localhost:5173/42 → "The number is: 42".
+- http://localhost:5173/hello → "The word is: hello".
+- http://localhost:5173/hello/blue/red → "hello" (styled with blue text on red background).
