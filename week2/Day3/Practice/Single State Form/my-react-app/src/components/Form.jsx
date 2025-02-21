@@ -31,11 +31,11 @@ const Form = () => {
                 </div>
                 <div>
                 <label>Password:</label>
-                <input type="text" name="password" value={formData.password} onChange={(e)=>chanheHandler(e)}/>
+                <input type="password" name="password" value={formData.password} onChange={(e)=>chanheHandler(e)}/>
                 </div>
                 <div>
                 <label>Confirm Password: </label>
-                <input type="text" name="confirmPassword" value={formData.confirmPassword} onChange={(e)=>chanheHandler(e)}/>
+                <input type="password" name="confirmPassword" value={formData.confirmPassword} onChange={(e)=>chanheHandler(e)}/>
                 </div>
             </form>
             <div>
