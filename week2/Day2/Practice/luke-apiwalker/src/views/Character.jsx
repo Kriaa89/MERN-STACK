@@ -8,17 +8,12 @@ const Character = () => {
     const [ error, setError ] = useState(false);
 
     useEffect(() => {
-        const fetchCharacter = async () => {
-            try {
-                const response = await axios.get('https://swapi.dev/api/people/: id');
-                setCharacter(response.data);
-                setError(false);
-            } catch (error) {
-                console.error(error)
-                setError(true);
-            }
-        };
-        fetchCharacter();
+        axios.get(`https://swapi.dev/api/people/${id}`)
+        .then(response => {
+            setCharacter(response.data);
+            setError(false);
+        })
+        .catch(() => setError(true));
     }, [id]);
     if (error) {
         return (
@@ -28,7 +23,7 @@ const Character = () => {
             </div>
         );
     }
-    return (
+    return character && (
         <div>
             <h1>{character.name}</h1>
             <p>Height: {character.height}</p>

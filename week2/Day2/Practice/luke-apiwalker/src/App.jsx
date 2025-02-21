@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SearchForm from "./components/SearchForm";
 import Character from "./views/Character";
-import Planet from "./views/Planet";
+import Planets from "./views/Planets";
 
 const App = () => {
 
@@ -12,7 +12,7 @@ const App = () => {
         <SearchForm/>
         <Routes>
           <Route path="/people/:id" element={<Character/>}/>
-          <Route path="/planetes/:id" element={<Planet/>}/>
+          <Route path="/planets/:id" element={<Planets/>}/>
         </Routes>
       </div>
     </BrowserRouter>
