@@ -8,7 +8,7 @@ const Character = () => {
     const [ error, setError ] = useState(false);
 
     useEffect(() => {
-        axios.get(`https://swapi.dev/api/people/${id}`)
+        axios.get('https://swapi.dev/api/people/' + id)  
         .then(response => {
             setCharacter(response.data);
             setError(false);

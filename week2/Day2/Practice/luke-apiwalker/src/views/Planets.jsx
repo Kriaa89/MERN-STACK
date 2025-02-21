@@ -7,7 +7,7 @@ const Planets = () => {
     const [planet, setPlanet] = useState(null);
     const [ error, setError] = useState(false);
     useEffect(() => {
-        axios.get(`https://swapi.dev/api/planets/${id}`)
+        axios.get('https://swapi.dev/api/planets/' + id)
         .then(response => {
             setPlanet(response.data);
             setError(false);
