@@ -31,10 +31,10 @@ const Form = () => {
             <div>
                 <h2>Your Data Form </h2>
                 <p>First Name: {formData.firstName}</p>
-                <p>Last Name: {formData.firstName}</p>
-                <p>Email: {formData.firstName}</p>
-                <p>Password: {formData.firstName}</p>
-                <p>Confirm Password: {formData.firstName}</p>
+                <p>Last Name: {formData.lastName}</p>
+                <p>Email: {formData.email}</p>
+                <p>Password: {formData.password}</p>
+                <p>Confirm Password: {formData.confirmPassword}</p>
             </div>
         </div>
         
