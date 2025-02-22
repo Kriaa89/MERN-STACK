@@ -27,6 +27,6 @@ const updateShow = (req, res) => {
     const title = req.params.title;
     const index = tvShows.find(show => show.title == title);
     if(show) {
-        show.satarring = 
+        show.satarring = req.body.satarring;
     }
 }
