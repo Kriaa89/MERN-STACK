@@ -31,5 +31,7 @@ const updateShow = (req, res) => {
     if(show) {
         show.satarring = req.body.satarring;
         res.json(tvShows);
+    } else {
+        res.status(404).send("Show not found");
     }
 };
