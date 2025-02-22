@@ -36,4 +36,4 @@ const updateShow = (req, res) => {
     }
 };
 
-export { getAllShows, getShowById, deleteShow, updateShow};
+export { getAllShows, getShowById, deleteShow, updateShow };
