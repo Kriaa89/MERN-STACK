@@ -32,6 +32,8 @@ const updateShow = (req, res) => {
         show.satarring = req.body.satarring;
         res.json(tvShows);
     } else {
-        res.status(404).send("Show not found");
+        res.status(404).send("Show not found"); // 
     }
 };
+
+export { getAllShows, getShowById, deleteShow, updateShow};
