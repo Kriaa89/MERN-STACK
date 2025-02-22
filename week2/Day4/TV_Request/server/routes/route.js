@@ -5,7 +5,7 @@ const router = Router();
 
 router.get("/shows", getAllShows);
 router.get("/shows/year/:year", getShowById);
-router.delete("/shows/title/:title", deleteShow);
-router.patch("/shows/title/:title", updateShow);
+router.delete("/shows/:title", deleteShow);
+router.patch("/shows/:title", updateShow);
 
 export default router;

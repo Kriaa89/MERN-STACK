@@ -14,7 +14,7 @@ const getShowById = (req, res) => {
 // delete Show by title 
 const deleteShow = (req, res) => {
     const title = req.params.title;
-    const index = tvShows.findIndex(show => show.title == title);
+    const index = tvShows.findIndex(show => show.tvShow === title);
     if (index !== -1) { // if show is found in the array
         tvShows.splice(index, 1); // remove the show from the array
         res.json(tvShows); 
@@ -27,9 +27,9 @@ const deleteShow = (req, res) => {
 // update show cast
 const updateShow = (req, res) => {
     const title = req.params.title;
-    const index = tvShows.find(show => show.title == title);
+    const show = tvShows.find(show => show.tvShow == title);
     if(show) {
-        show.satarring = req.body.satarring;
+        show.starring = req.body.satarring;
         res.json(tvShows);
     } else {
         res.status(404).send("Show not found"); // 
