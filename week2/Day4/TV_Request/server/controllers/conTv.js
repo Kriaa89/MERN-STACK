@@ -7,14 +7,14 @@ const getAllShows = (req, res) => {
 // Get show by year
 const getShowById = (req, res) => {
     const year = parseInt(req.params.year);
-    const filterShows = tvShows.filter(show => show.year === year);
+    const filterShows = tvShows.filter(show => show.year == year);
     res.json(filterShows);
 };
 
 // delete Show by title 
 const deleteShow = (req, res) => {
     const title = req.params.title;
-    const index = tvShows.findIndex(show => show.title === title);
+    const index = tvShows.findIndex(show => show.title == title);
     if (index > -1) {
         tvShows.splice(index, 1);
         res.json(tvShows);
@@ -23,3 +23,10 @@ const deleteShow = (req, res) => {
 
 
 // update show cast
+const updateShow = (req, res) => {
+    const title = req.params.title;
+    const index = tvShows.find(show => show.title == title);
+    if(show) {
+        show.satarring = 
+    }
+}
