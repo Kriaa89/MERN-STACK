@@ -7,7 +7,7 @@ const getAllShows = (req, res) => {
 // Get show by year
 const getShowById = (req, res) => {
     const year = parseInt(req.params.year);
-    const filterShows = tvShows.filter(show => show.year == year);
+    const filterShows = tvShows.filter(show => show.yearCreated == year);
     res.json(filterShows);
 };
 
@@ -15,7 +15,7 @@ const getShowById = (req, res) => {
 const deleteShow = (req, res) => {
     const title = req.params.title;
     const index = tvShows.findIndex(show => show.title == title);
-    if (index > -1) { // if show is found in the array
+    if (index !== -1) { // if show is found in the array
         tvShows.splice(index, 1); // remove the show from the array
         res.json(tvShows); 
     } else {
