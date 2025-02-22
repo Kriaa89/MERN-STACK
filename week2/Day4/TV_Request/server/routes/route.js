@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import {  getAllShows, getShowById, deleteShow, updateShow } from '../controllers/conTv';
+import {  getAllShows, getShowById, deleteShow, updateShow } from '../controllers/conTv.js';
 
 const router = Router();
 

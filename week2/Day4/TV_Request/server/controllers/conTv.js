@@ -1,4 +1,4 @@
-import tvShows from "../config/Database";
+import tvShows from "../config/Database.js";
 
 const getAllShows = (req, res) => {
     res.json(tvShows);
