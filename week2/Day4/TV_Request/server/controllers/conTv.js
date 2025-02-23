@@ -27,12 +27,12 @@ const deleteShow = (req, res) => {
 // update show cast
 const updateShow = (req, res) => {
     const title = req.params.title;
-    const show = tvShows.find(show => show.tvShow == title);
+    const show = tvShows.find(show => show.tvShow === title);
     if(show) {
-        show.starring = req.body.satarring;
-        res.json(tvShows);
+        show.starring = req.body.starring;
+        res.json(show);
     } else {
-        res.status(404).send("Show not found"); // 
+        res.status(404).json("Show not found"); // 
     }
 };
 
