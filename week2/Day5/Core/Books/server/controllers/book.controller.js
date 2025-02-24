@@ -1,9 +1,9 @@
-import Book from "../models/book.model";
+import Book from "../models/book.model.js";
 
 // create a book 
 async function createBook(req, res) {
     try {
-        const NewBook = await Book.create(req.body);
+        const newBook = await Book.create(req.body);
         res.json(newBook);
     } catch (error) {
         res.status(400).json(error);
