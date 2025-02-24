@@ -13,39 +13,57 @@ const UserForm = () => {
     
     const handleFirstName = (e) => {
         setFirstName(e.target.value);
-        if(e.target.value.length < 2) {
-            setFirstNameError("First Name must be at least 2 characters");
-        }else {
+        if(e.target.value.length < 1) {
+            setFirstNameError("");
+        }else if (e.target.value.length < 2){
+            setFirstNameError("First Name must be at least 2 characters")
+        } else {
             setFirstNameError("");
         }
     }
     const handleLastName = (e) => {
         setlastName(e.target.value);
-        if(e.target.value.length < 2) {
-            setLastNameError("Last Name msut be at least 2 characters");
+        if(e.target.value.length < 1) {
+            setFirstNameError("");
+        }else if (e.target.value.length < 2){
+            setLastNameError("Last Name msut be at least 2 characters")
         } else {
             setLastNameError("");
         }
     }
     const handleEmail = (e) => {
         setEmail(e.target.value);
-        if(e.target.value.length < 8) {
-            setEmailError("Email msut be at least 2 characters");
+        if(e.target.value.length < 1) {
+            setEmailError("");
+        }else if (e.target.value.length < 8){
+            setEmailError("Email msut be at least 8 characters")
         } else {
             setEmailError("");
         }
     }
+
     const handlePassword = (e) => {
         setPassword(e.target.value);
-        if(e.target.value.length < 8) {
-            setPasswordError("Password must be at least 8 characters");
-        } else {
+        if(e.target.value.length < 1) {
             setPasswordError("");
+        }else if (e.target.value.length < 8){
+            setEmailError("Password must be at least 8 characters")
+        } else {
+            setEmailError("");
+        }
+        if (confirmPassword.length > 0 && e.target.value !== confirmPassword) {
+            setConfirmPasswordError("Passwords must match");
+        } else {
+            setConfirmPasswordError("");
         }
     }
+
+
     const handleConfirmPassword = (e) => {
         setConfirmPassword(e.target.value);
-        if(e.target.value !== password) {
+        if(e.target.value < 1) {
+            setConfirmPasswordError("");
+        } else if(e.target.value !== password) {
             setConfirmPasswordError("Passwords must match");
         } else {
             setConfirmPasswordError("");
@@ -55,29 +73,33 @@ const UserForm = () => {
     return (
         <form>
             <div>
-                <label>First Name:</label>
-                <input type="text" value={ firstName } onChange={ (e) => setFirstName(e.target.value) }/>
-                {firstNameError ? <p> {firstNameError} </p> :" "
-                }
+                <label >First Name: </label>
+                <input type="text" value={firstName} onChange={handleFirstName}/>
+                {  firstNameError ? <p>{firstNameError}</p>: ""}
             </div>
             <div>
-                <label>Last Name:</label>
-                <input type="text" value={ lastName } onChange={ (e) => setlastName(e.target.value) }/>
+                <label >Last  Name: </label>
+                <input type="text" value={lastName} onChange={handleLastName}/>
+                {  lastNameError ? <p>{lastNameError}</p>: ""}
             </div>
             <div>
-                <label>Email:</label>
-                <input type="text" value={ email } onChange={ (e) => setEmail(e.target.value) }/>
+                <label >Email: </label>
+                <input type="text" value={email} onChange={handleEmail}/>
+                {  emailError ? <p>{emailError}</p>: ""}
             </div>
             <div>
-                <label>Password:</label>
-                <input type="text" value={ password } onChange={ (e) => setPassword(e.target.value) }/>
+                <label >Password: </label>
+                <input type="password" value={password} onChange={handlePassword}/>
+                {  passwordError ? <p>{passwordError}</p>: ""}
             </div>
             <div>
-                <label>Confirm Password:</label>
-                <input type="text" value={ confirmPassword } onChange={ (e) => setConfirmPassword(e.target.value) }/>
+                <label >Confirm Password: </label>
+                <input type="password" value={confirmPassword} onChange={handleConfirmPassword}/>
+                {  confirmPasswordError ? <p>{confirmPasswordError}</p>: ""}
             </div>
         </form>
     );
+
 };
 
 export default UserForm;
