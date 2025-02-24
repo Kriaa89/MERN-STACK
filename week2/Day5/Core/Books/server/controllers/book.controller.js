@@ -49,13 +49,4 @@ async function deleteBook(req, res) {
     }
 }
 
-async function deleteBook(req, res) {
-    try {
-        const deletedBook = await Book.findByIdAndDelete(req.params.id);
-        res.json(deletedBook);
-    } catch (error) {
-        res.status(400).json(error);
-    }
-}
-
 export { createBook, getAllBooks, getOneBook, updateBook, deleteBook };
