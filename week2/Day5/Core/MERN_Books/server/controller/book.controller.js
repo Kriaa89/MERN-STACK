@@ -40,3 +40,5 @@ async function  deleteBook(req, res) {
         res.status(400).json(error);
     }
 }
+
+export { CreateBook, getAllBooks, getOneBook, deleteBook};
