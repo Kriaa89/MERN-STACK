@@ -22,11 +22,15 @@ function BookDetails() {
         <div className="detail-container">
             <h2>{book.title}</h2>
             <div className="detail-container">
-                <p><strong>Author:</strong></p>
-                <p><strong>Pages:</strong></p>
-                <p><strong>Status:</strong></p>
-
+                <p><strong>Author:</strong>{book.author}</p>
+                <p><strong>Pages:</strong>{book.pages}</p>
+                <p><strong>Status:</strong>{book.isAvailable ? "Available" : "Not Available"}</p>
+                <button onClick={handleBorrow} className="borrow-btn">
+                    Borrow
+                </button>
             </div>
         </div>
-    )
+    );
 }
+
+export default BookDetails;
