@@ -31,15 +31,15 @@ function BookForm() {
                 </div>
                 <div>
                     <label>Author:</label>
-                    <input type="text" value={author} onChange={e => setTitle(e.target.value)} />
+                    <input type="text" value={author} onChange={e => setAuthor(e.target.value)} />
                 </div>
                 <div>
                     <label>Pages:</label>
-                    <input type="number" value={author} onChange={e => setTitle(e.target.value)} />
+                    <input type="number" value={pages} onChange={e => setPages(e.target.value)} />
                 </div>
                 <div>
                     <label>it is available ?</label>
-                    <input type="checkbox" checked={isAvailable} onChange={e => setTitle(e.target.value)} />
+                    <input type="checkbox" checked={isAvailable} onChange={e => setIsAvailable(e.target.checked)} />
                 </div>
                 <button type="submit">Add Book</button>
             </form>
