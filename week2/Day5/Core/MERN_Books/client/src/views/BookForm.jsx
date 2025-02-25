@@ -19,7 +19,7 @@ function BookForm() {
             isAvailable
         })
         .then(() => navigate('/'))
-        .catch(console.log(err));
+        .catch( err => console.log(err));
     };
     return (
         <div className="form-container">
