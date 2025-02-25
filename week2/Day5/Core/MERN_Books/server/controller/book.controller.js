@@ -3,7 +3,7 @@ import Book from "../model/book.model.js";
 // Create a new book
 async function CreateBook(req, res) {
     try {
-        const newBook = new Book(req.body);
+        const newBook = await Book.create(req.body);
         res.json(newBook);
     } catch (error) {
         res.status(400).json(error);

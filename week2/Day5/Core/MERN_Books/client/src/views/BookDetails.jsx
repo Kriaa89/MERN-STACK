@@ -3,14 +3,19 @@ import { useEffect, useState } from "react"; // import UseState and UseEffect to
 import { useParams, useNavigate } from "react-router-dom";
 
 function BookDetails() {
-    const [book, setBook] = useState(null)
+    const [book, setBook] = useState({})
     const { id } = useParams();
     const navigate = useNavigate();
 
     useEffect(() => {
         axios.get(`http://localhost:8000/api/book/${id}`)
-            .then(res => setBook(res.data))
-            .catch(err => console.log(err));
+            .then(res => {
+                console.log(res.data);
+                setBook(res.data);
+            })
+            .catch(err => {
+                console.log(err)
+            });
     }, [id]);
 
     const handleBorrow = () => {
