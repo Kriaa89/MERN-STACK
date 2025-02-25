@@ -22,9 +22,27 @@ function BookForm() {
         .catch(console.log(err));
     };
     return (
-        <form onSubmit={handleSubmit}>
-            
-
-        </form>
-    )
+        <div className="form-container">
+            <h2>Add a New Book</h2>
+            <form onSubmit={handleSubmit}>
+                <div>
+                    <label>Title:</label>
+                    <input type="text" value={title} onChange={e => setTitle(e.target.value)} />
+                </div>
+                <div>
+                    <label>Author:</label>
+                    <input type="text" value={author} onChange={e => setTitle(e.target.value)} />
+                </div>
+                <div>
+                    <label>Pages:</label>
+                    <input type="number" value={author} onChange={e => setTitle(e.target.value)} />
+                </div>
+                <div>
+                    <label>it is available ?</label>
+                    <input type="checkbox" checked={isAvailable} onChange={e => setTitle(e.target.value)} />
+                </div>
+                <button type="submit">Add Book</button>
+            </form>
+        </div>
+    );
 }

@@ -39,7 +39,6 @@ function BookList() {
                     ))}
                 </tbody>
             </table>
-
         </div>
     );
 }
