@@ -46,3 +46,4 @@ function BookForm() {
         </div>
     );
 }
+export default BookForm;
