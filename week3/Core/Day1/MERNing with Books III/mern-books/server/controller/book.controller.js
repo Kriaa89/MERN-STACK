@@ -41,4 +41,12 @@ async function  deleteBook(req, res) {
     }
 }
 
+// Update book
+async function updateBook(req, res) {
+    try {
+        const updateBook = await book.findByIdAndUpdate(
+            
+        )
+    }
+}
 export { CreateBook, getAllBooks, getOneBook, deleteBook};
