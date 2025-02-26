@@ -44,7 +44,7 @@ async function  deleteBook(req, res) {
 // Update book
 async function updateBook(req, res) {
     try {
-        const updateBook = await book.findByIdAndUpdate(req.params.id, req.body, {
+        const updateBook = await Book.findByIdAndUpdate(req.params.id, req.body, {
             runValidators: true,
             new: true,
         })

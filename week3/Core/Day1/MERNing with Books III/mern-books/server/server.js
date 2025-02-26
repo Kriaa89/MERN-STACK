@@ -11,7 +11,7 @@ dotenv.config();
 
 const PORT = process.env.PORT;
 
-app.use('/api', router);
+app.use('/api/books', router);
 dbConnect();
 
 app.listen(PORT, () => 

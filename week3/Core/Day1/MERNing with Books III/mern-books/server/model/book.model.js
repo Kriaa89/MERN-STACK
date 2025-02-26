@@ -7,7 +7,7 @@ const BookSchema = new Schema(
             minlength: [2, "Title must be at least 2 characters"],
             maxlength: [255, "Title cannot be more than 255 characters"]
         },
-        author: {
+        authorName: {
             type: String,
             required: [true, "Author is required!"],
             minlength: [5, "Author must be at least 5 characters long!"],
