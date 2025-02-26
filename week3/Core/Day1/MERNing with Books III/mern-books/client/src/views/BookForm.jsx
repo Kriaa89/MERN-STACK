@@ -17,7 +17,7 @@ function BookForm() {
         e.preventDefault();
         axios.post("http://localhost:8000/api/books", {
             ...book,
-            pages : parseInt(pages), // we use parseInt to convert the string to an integer
+            pages : parseInt(book.pages), // we use parseInt to convert the string to an integer
         })
         .then(() => navigate('/'))
         .catch( err => setErrors(err.response.data.errors));
