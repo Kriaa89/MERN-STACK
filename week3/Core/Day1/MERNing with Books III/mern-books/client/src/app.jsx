@@ -3,6 +3,7 @@ import Header from "./components/Header"
 import BookList from "./components/BookList"
 import UpdateBook from "./components/UpdateBook"
 import BookForm from "./components/BookForm"
+import BookDetails from "./components/BookDetails"
 
 
 function App() {
@@ -13,10 +14,11 @@ function App() {
       <Routes>
       <Route path="/" element={<BookList />} />
           <Route path="/books/new" element={<BookForm />} />
+          <Route ath="/books/:id" element={<BookDetails />}></Route>
           <Route path="/books/:id/edit" element={<UpdateBook />} />
       </Routes>
     </BrowserRouter>
   )
 }
 
-export default App
+export default App;

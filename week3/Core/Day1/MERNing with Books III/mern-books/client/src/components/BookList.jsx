@@ -17,9 +17,10 @@ function BookList() {
                 <thead>
                     <tr>
                         <th>Title</th>
-                        <th>Author Name</th>
+                        <th>Author</th>
                         <th>Pages</th>
                         <th>Available</th>
+                        <th>Book Page</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,6 +33,11 @@ function BookList() {
                                 {book.isAvailable ? "Yes" : "No"}
                                 <Link to={`/books/${book._id}/edit`} className="edit-link">
                                     Edit
+                                </Link>
+                            </td>
+                            <td>
+                                <Link to={`/books/${book._id}`}>
+                                    Book Detail
                                 </Link>
                             </td>
                         </tr>

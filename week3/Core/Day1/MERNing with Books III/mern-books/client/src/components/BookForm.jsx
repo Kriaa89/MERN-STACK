@@ -37,7 +37,7 @@ function BookForm() {
                     }
                 </div>
                 <div className="form-group">
-                    <label>Author Name:</label>
+                    <label>Author:</label>
                     <input 
                         type="text"
                         value={book.authorName}
