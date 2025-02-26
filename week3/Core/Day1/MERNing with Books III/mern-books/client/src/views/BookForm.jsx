@@ -4,22 +4,23 @@ import axios from "axios"; // import axios to make requests to the server
 
 
 function BookForm() {
-    const [title, setTitle] = useState("");
-    const [author, setAuthor] = useState("");
-    const [pages, setPages] = useState("");
-    const [isAvailable, setIsAvailable] = useState(true);
+    const [book, setBook] = useState({
+        title: "",
+        author: "",
+        pages: "",
+        isAvailable: true
+    });
+    const [errors, setErrors] = useState({});
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         axios.post("http://localhost:8000/api/book", {
-            title,
-            author,
+            ...book,
             pages : parseInt(pages), // we use parseInt to convert the string to an integer
-            isAvailable
         })
         .then(() => navigate('/'))
-        .catch( err => console.log(err));
+        .catch( err => setErrors(err.response.data.errors));
     };
     return (
         <div className="form-container">
@@ -27,19 +28,21 @@ function BookForm() {
             <form onSubmit={handleSubmit}>
                 <div>
                     <label>Title:</label>
-                    <input type="text" value={title} onChange={e => setTitle(e.target.value)} />
+                    <input type="text" value={title} onChange={e =>  setBook({...book, title: e.target.value})} />
+                    { errors.title && <p>{errors.title.message}</p>}
                 </div>
                 <div>
                     <label>Author:</label>
-                    <input type="text" value={author} onChange={e => setAuthor(e.target.value)} />
+                    <input type="text" value={author} onChange={e => setBook({...book, author: e.target.value})} />
                 </div>
                 <div>
                     <label>Pages:</label>
-                    <input type="number" value={pages} onChange={e => setPages(e.target.value)} />
+                    <input type="number" value={pages} onChange={e => setBook({...book, pages: e.target.value})} />
+                    { errors.author && <p>{errors.author.message}</p>}
                 </div>
                 <div>
                     <label>it is available ?</label>
-                    <input type="checkbox" checked={isAvailable} onChange={e => setIsAvailable(e.target.checked)} />
+                    <input type="checkbox" checked={isAvailable} onChange={e => setbook(e.target.checked)} />
                 </div>
                 <button type="submit">Add Book</button>
             </form>

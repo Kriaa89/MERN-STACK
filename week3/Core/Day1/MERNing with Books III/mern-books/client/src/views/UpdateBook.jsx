@@ -39,6 +39,7 @@ function updateBook() {
                 <div className='form-group'>
                     <label> Pages: </label>
                     <input type="number" value={book.pages} onChange={e => setBook({...book, pages: e.target.value})}/>
+                    { errors.pages && <p>{errors.author.pages}</p>}
                 </div>
                 <button type="submit">Update Book</button>
             </form>
