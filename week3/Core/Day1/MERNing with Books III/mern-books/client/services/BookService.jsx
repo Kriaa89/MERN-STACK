@@ -18,4 +18,13 @@ export const getOneBook = (id) => {
         .catch(err => {throw err; });
 }
 
-export const addBook = 
+export const createBook = (book) => {
+    return http.post('/books', book)
+        .then(response => response.data)
+        .catch(err => {throw err; });
+}
+export const updateBook = (id, book) => {
+    return http.put(`/books/${id}`, book)
+        .then(response => response.data)
+        .catch(err => {throw err; });
+}
