@@ -28,21 +28,21 @@ function BookForm() {
             <form onSubmit={handleSubmit}>
                 <div>
                     <label>Title:</label>
-                    <input type="text" value={title} onChange={e =>  setBook({...book, title: e.target.value})} />
+                    <input type="text" value={book.title} onChange={e =>  setBook({...book, title: e.target.value})} />
                     { errors.title && <p>{errors.title.message}</p>}
                 </div>
                 <div>
                     <label>Author:</label>
-                    <input type="text" value={author} onChange={e => setBook({...book, author: e.target.value})} />
+                    <input type="text" value={book.author} onChange={e => setBook({...book, author: e.target.value})} />
                 </div>
                 <div>
                     <label>Pages:</label>
-                    <input type="number" value={pages} onChange={e => setBook({...book, pages: e.target.value})} />
+                    <input type="number" value={book.pages} onChange={e => setBook({...book, pages: e.target.value})} />
                     { errors.author && <p>{errors.author.message}</p>}
                 </div>
                 <div>
                     <label>it is available ?</label>
-                    <input type="checkbox" checked={isAvailable} onChange={e => setBook({...book, isAvailable: e.target.value})} />
+                    <input type="checkbox" checked={book.isAvailable} onChange={e => setBook({...book, isAvailable: e.target.checked})} />
                 </div>
                 <button type="submit">Add Book</button>
             </form>
