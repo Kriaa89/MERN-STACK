@@ -8,7 +8,7 @@ function BookDetails() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/book/${id}`)
+        axios.get(`http://localhost:8000/api/books/${id}`)
             .then(res => {
                 console.log(res.data);
                 setBook(res.data);
@@ -19,7 +19,7 @@ function BookDetails() {
     }, [id]);
 
     const handleBorrow = () => {
-        axios.delete(`http://localhost:8000/api/book/${id}`)
+        axios.delete(`http://localhost:8000/api/books/${id}`)
             .then(() => navigate('/'))
             .catch(err => console.log(err));
     };

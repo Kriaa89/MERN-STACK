@@ -7,7 +7,7 @@ function BookList() {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:8000/api/book")
+        axios.get("http://localhost:8000/api/books")
             .then(res => setBooks(res.data))
             .catch(err => console.log(err));
     }, []);

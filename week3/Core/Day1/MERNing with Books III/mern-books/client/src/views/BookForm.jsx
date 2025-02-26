@@ -15,7 +15,7 @@ function BookForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:8000/api/book", {
+        axios.post("http://localhost:8000/api/books", {
             ...book,
             pages : parseInt(pages), // we use parseInt to convert the string to an integer
         })

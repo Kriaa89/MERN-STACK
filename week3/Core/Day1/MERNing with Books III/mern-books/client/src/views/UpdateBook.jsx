@@ -13,13 +13,13 @@ function updateBook() {
     });
     const [errors , setErrors] = useState({});
     useEffect(() => { // the useEffect will run when the component loads
-        axios.get(`http://localhost:8000/api/book/${id}`)
+        axios.get(`http://localhost:8000/api/books/${id}`)
             .then(res => setBook(res.data))
             .catch(err => console.log(err));
     }, [id]);
     const handleSubmit = (e) => { // the handleSubmit will handle the form submission
         e.preventDefault();
-        axios.put(`http://localhost:8000/api/book/${id}`, book)
+        axios.put(`http://localhost:8000/api/books/${id}`, book)
             .then(res => navigate('/'))
             .catch(err => setErrors(err.resonse.data.errors));
     };
