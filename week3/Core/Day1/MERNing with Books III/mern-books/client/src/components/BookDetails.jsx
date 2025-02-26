@@ -9,13 +9,8 @@ function BookDetails() {
 
     useEffect(() => {
         axios.get(`http://localhost:8000/api/books/${id}`)
-            .then(res => {
-                console.log(res.data);
-                setBook(res.data);
-            })
-            .catch(err => {
-                console.log(err)
-            });
+            .then(res => {setBook(res.data)})
+            .catch(err => {console.log(err)});
     }, [id]);
 
     const handleBorrow = () => {
@@ -24,7 +19,7 @@ function BookDetails() {
             .catch(err => console.log(err));
     };
     return (
-        <div className="detail-container">
+        <div className="">
             <h2>{book.title}</h2>
             <div className="detail-container">
                 <p><strong>Author:</strong>{book.authorName}</p>
