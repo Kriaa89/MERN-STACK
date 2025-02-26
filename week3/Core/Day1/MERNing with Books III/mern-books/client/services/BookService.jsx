@@ -28,3 +28,9 @@ export const updateBook = (id, book) => {
         .then(response => response.data)
         .catch(err => {throw err; });
 };
+
+export const deleteBook = (id) => {
+    return http.delete(`/books/${id}`)
+        .then(response => response.data)
+        .catch(err => {throw err; });
+}
