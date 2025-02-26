@@ -4,7 +4,7 @@ import axios from "axios"; // import axios to make requests to the server
 
 
 function BookForm() {
-    const [book, setBook] = useState({
+    const [book, setBook] = useState({ // this is the state that will hold the book data and we use the useState to initialize it with   an empty object
         title: "",
         author: "",
         pages: "",
@@ -42,7 +42,7 @@ function BookForm() {
                 </div>
                 <div>
                     <label>it is available ?</label>
-                    <input type="checkbox" checked={isAvailable} onChange={e => setbook(e.target.checked)} />
+                    <input type="checkbox" checked={isAvailable} onChange={e => setBook({...book, isAvailable: e.target.value})} />
                 </div>
                 <button type="submit">Add Book</button>
             </form>
