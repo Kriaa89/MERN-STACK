@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useParams} from 'react-router-dom';
 import axios from 'axios'; 
 
-function updateBook() {
+function UpdateBook() {
     const { id } = useParams();
     const navigate = useNavigate();
     const [book, setBook] = useState({
@@ -39,10 +39,11 @@ function updateBook() {
                 <div className='form-group'>
                     <label> Pages: </label>
                     <input type="number" value={book.pages} onChange={e => setBook({...book, pages: e.target.value})}/>
-                    { errors.pages && <p>{errors.author.pages}</p>}
+                    { errors.pages && <p>{errors.pages.message}</p>}
                 </div>
                 <button type="submit">Update Book</button>
             </form>
         </div>
     )
 }
+export default UpdateBook;
