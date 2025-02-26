@@ -44,9 +44,13 @@ async function  deleteBook(req, res) {
 // Update book
 async function updateBook(req, res) {
     try {
-        const updateBook = await book.findByIdAndUpdate(
-            
-        )
+        const updateBook = await book.findByIdAndUpdate(req.params.id, req.body, {
+            runValidators: true,
+            new: true,
+        })
+        res.json(updateBook);
+    } catch (error) {
+        res.status(400).json(error);
     }
 }
-export { CreateBook, getAllBooks, getOneBook, deleteBook};
+export { CreateBook, getAllBooks, getOneBook, deleteBook, updateBook};
