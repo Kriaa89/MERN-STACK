@@ -13,6 +13,6 @@ function updateBook() {
     });
     const [errors , setErrors] = useState({});
     useEffect(() => {
-        axios.get(``)
+        axios.get(`http://localhost:8000/api/book/${id}`)
     })
 }
